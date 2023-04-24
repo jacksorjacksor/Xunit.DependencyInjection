@@ -95,12 +95,12 @@ public class Startup
 ```
 
 * Configure method
-Anything defined in ConfigureServices, can be specified in the Configure method signature. These services are injected if they're available.
+Anything defined in ConfigureServices can be specified in the Configure method signature. These services are injected if they're available.
 
 ## How to find `Startup`?
 
 ### 1. Specific startup
-Declare [Startup] on test class
+Declare [Startup] on the test class
 
 ### 2. Nest startup
 ``` C#
@@ -122,7 +122,7 @@ If the class type full name is "A.B.C.TestClass", find Startup in the following 
 ### 4. Default startup
 > Default startup is required before 8.7.0, is optional in some case after 8.7.0.
 >
-> If is required, plaese add a startup class in your test project.
+> If default startup is required, please add a startup class in your test project.
 
 Default is find Your.Test.Project.Startup, Your.Test.Project`.
 
@@ -168,7 +168,7 @@ internal class DependencyClass : IDependency
 ```
 
 ## Write Microsoft.Extensions.Logging to ITestOutputHelper
-> The call chain must from test case. If not, this feature will not work.
+> The call chain must be from the test case. If it is not, this feature will not work.
 
 ``` C#
 public class Startup
